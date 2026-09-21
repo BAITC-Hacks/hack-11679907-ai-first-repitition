@@ -1,0 +1,10 @@
+services:
+  faq-bot:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      FAQ_PATH: /app/faq.txt
+    stdin_open: true
+    tty: true
